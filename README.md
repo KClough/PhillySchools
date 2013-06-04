@@ -9,7 +9,7 @@ Address, phone number, grade level and website are avaliable for all schools. A 
 
 This app was built using Mark Headd's School Data API. https://github.com/mheadd/schooldata-api
 
-This applicaiton was built by Jarvus Innovation's developers Kevin Clough and Chris Alfono. 
+This applicaiton was built by Jarvus Innovation's developers Chris Alfono, Kevin Clough and Ryon Coleman. 
 
 This application is hosted on an emergence server and hosting has been provided by Jarvus. It can be hosted on any basic webserver, and can also be packaged as a native app on a variety of mobile platforms including iOS and Android.
 
