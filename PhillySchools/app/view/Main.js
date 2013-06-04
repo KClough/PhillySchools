@@ -80,26 +80,32 @@ Ext.define('PhillySchools.view.Main', {
 								}
                             },
 		                    {
-		                        xtype: 'segmentedbutton',
-		                        docked: 'bottom',
-		                        layout: {
-		                            pack: 'center',
-		                            type: 'hbox'
-		                        },
+		                        xtype: 'toolbar',
+		                        docked: 'top',
+		                        ui: 'light',
 		                        items: [
-		                            {
-		                                xtype: 'button',
-		                                pressed: true,
-		                                text: 'All'
-		                            },
-		                            {
-		                                xtype: 'button',
-		                                text: 'Open'
-		                            },
-		                            {
-		                                xtype: 'button',
-		                                text: 'Closed'
-		                            }
+		                        	{
+			                        	xtype: 'segmentedbutton',
+			                        	flex: 1,
+			                        	defaults: {
+				                        	flex: 1
+			                        	},
+				                        items: [
+				                            {
+				                                xtype: 'button',
+				                                pressed: true,
+				                                text: 'All'
+				                            },
+				                            {
+				                                xtype: 'button',
+				                                text: 'Open'
+				                            },
+				                            {
+				                                xtype: 'button',
+				                                text: 'Closed'
+				                            }
+				                        ]			                        	
+		                        	}
 		                        ]
 		                    }
 		                ]
@@ -141,15 +147,24 @@ Ext.define('PhillySchools.view.Main', {
                 xtype: 'container',
                 title: 'About',
                 iconCls: 'info',
+                cls: 'about-text',
                 styleHtmlContent: true,
-                html: '<div class="about"><p>Philly Scools is a mobile application developed during Random Hacks for Kidness Philly #5.</p>'
-                	+ '<p>Special thanks to <a href="https://github.com/mheadd">Mark Headd</a> for making the Schools API avaliable.</p>'
-					+ '<p><a class="button" href="http://www.rhok.org/event/philadelphia" target="_blank">Learn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;More&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Here</a></p>'
-					+'<a class="jarvus" href="http://jarv.us" target="_blank">Mobile app made by <img width="100%" src="resources/images/jarvusLogo.png" alt="jarvusLogo" width="" height="" /> </a></div>'
+                html: '<p>Philly Schools is a mobile application developed during <a href="http://www.rhok.org/event/philadelphia" target=_blank>Random Hacks of Kidness Philly #5</a>.</p>'
+                	+ '<p>Special thanks to <a href="https://github.com/mheadd" target=_blank>Mark Headd</a> for making the <a href="http://phillyschools.info/" target=_blank>PhillySchools API</a> avaliable.</p>',
+				items: [{
+					docked: 'bottom',
+					xtype: 'component',
+					cls: 'about-footer',
+					styleHtmlContent: true,
+					html: '<small>Mobile app made by <a href="http://jarv.us" target=_blank><img src="resources/images/jarvusLogo.png" alt="Jarvus Innovations"></a>'
+				}]
             }
         ],
         tabBar: {
-            docked: 'bottom'
+            docked: 'bottom',
+            defaults: {
+	            flex: 1
+            }
         }
 
         

@@ -39,29 +39,29 @@ Ext.define('PhillySchools.view.SchoolDetail', {
 		           	{
 		                text: 'Show Map',
 		                action: 'showMap',
-		                iconCls: 'locate4'
+		                //iconCls: 'locate4'
 		            },
 		            {
 		                text: 'Show Demographics',
 		                action: 'showDemographics',
-		                iconCls: 'team'
+		                //iconCls: 'team'
 		            },
 		            {
 		                text: 'Show Enrollment',
 		                action: 'showEnrollment',
-		                iconCls: 'chart2',
+		                //iconCls: 'chart2',
 		                disabled: true
 		            },
 		            {
 		                text: 'Show Test Scores',
 		                action: 'showTestScores',
-		                iconCls: 'bulb',
+		                //iconCls: 'bulb',
 		                disabled: true
 		            },
 		            {
 		                text: 'Show Budget',
 		                action: 'showBudget',
-		                iconCls: 'piechart',
+		                //iconCls: 'piechart',
 		                disabled: true
 		            }
 	            ]
