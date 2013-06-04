@@ -12,48 +12,60 @@ Ext.define('PhillySchools.view.SchoolDetail', {
             {
                 xtype: 'container',
                 itemId: 'schoolInfoCt',
+                cls: 'school-info',
                 styleHtmlContent: true,
                 tpl: [
-					'<p>{name}</p>',
-					'<p>{level}</p>',
-					'<p>{address}</p>',
-					'<p>{zip}</p>',
+					'<h1 class="school-name">{name}</h1>',
+					'<h2 class="school-level">{level}</h2>',
+					'<p class="school-address">',
+						'<span class="school-street">{address}</span>',
+						'<tpl if="zip">, <span class="school-zip">{zip}</span></tpl>',
 					'<tpl if="phone_number">',
-						'<p><a href="tel:+{phone_number}">{phone_number_formatted}</a></p>',
+						'<p class="school-phone"><a href="tel:+{phone_number}">{phone_number_formatted}</a></p>',
 					'</tpl>',
 					'<tpl if="url">',
-						'<p><a href="{url}">Visit Website</a></p>',
+						'<p class="school-url"><a href="{url}">Visit Website</a></p>',
 					'</tpl>'
 				]
-            },
-           {
-				xtype: 'button',
-                text: 'Show Map',
-                action: 'showMap'
-            },
-            {
-				xtype: 'button',
-                text: 'Show Demographics',
-                action: 'showDemographics'
-            },
-            {
-            	xtype: 'button',
-                text: 'Show Enrollment',
-                action: 'showEnrollment',
-                disabled: true
-            },
-            {
-				xtype: 'button',
-                text: 'Show Standardized Test Scores',
-                action: 'showTestScores',
-                disabled: true
-            },
-            {
-				xtype: 'button',
-                text: 'Show Budget',
-                action: 'showBudget',
-                disabled: true
-            }
+			},
+			{
+           		xtype: 'container',
+           		cls: 'school-actions',
+           		defaults: {
+           			xtype: 'button',
+	           		// iconMasked: true
+           		},
+           		items: [
+		           	{
+		                text: 'Show Map',
+		                action: 'showMap',
+		                iconCls: 'locate4'
+		            },
+		            {
+		                text: 'Show Demographics',
+		                action: 'showDemographics',
+		                iconCls: 'team'
+		            },
+		            {
+		                text: 'Show Enrollment',
+		                action: 'showEnrollment',
+		                iconCls: 'chart2',
+		                disabled: true
+		            },
+		            {
+		                text: 'Show Test Scores',
+		                action: 'showTestScores',
+		                iconCls: 'bulb',
+		                disabled: true
+		            },
+		            {
+		                text: 'Show Budget',
+		                action: 'showBudget',
+		                iconCls: 'piechart',
+		                disabled: true
+		            }
+	            ]
+	        }
 //          TODO add charts once I Get all data on one request
 //            {
 //                xtype: 'container',

@@ -1,3 +1,7 @@
+$base-color: #bd1d08;
+
+$muted-color: #999;
+
 @import 'sencha-touch/default/all';
 
 // You may remove any of the following modules that you
@@ -16,4 +20,46 @@
 @include sencha-form;
 @include sencha-msgbox;
 
-// Your custom code goes here...
+@include pictos-iconmask('locate4');
+@include pictos-iconmask('team');
+@include pictos-iconmask('chart2');
+@include pictos-iconmask('bulb');
+@include pictos-iconmask('piechart');
+
+.school-info {
+	font-family: Georgia, serif;
+
+	.school-name {
+		color: darken($base-color, 10);
+		font-size: 1.75em;
+		margin-bottom: 0;
+	}
+
+	.school-level {
+		color: $muted-color;
+		font-size: 1.25em;
+		margin-top: .25em;
+	}
+	
+	.school-address {
+		border: 1px solid #ccc;
+		border-width: 1px 0;
+		padding: 1em 0;
+	}
+	
+	.school-zip {
+		color: $muted-color;
+	}
+	
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.school-actions {
+	padding: 1em;
+	
+	.x-button {
+		margin-bottom: .3em;
+	}
+}
